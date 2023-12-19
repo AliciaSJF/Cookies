@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paso [[${paso}]]</title>
+</head>
+<body>
+ <form th:action="|paso${paso}|" method="post">
+   <h1 th:text="'Paso ' + ${paso}"/>
+   <input type =submit value="siguiente paso"/>
+ </form>
+</body>
+</html>
