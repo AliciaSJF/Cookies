@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="comprobarUsuario" method="post">
+
+    <label for="nombre">Username</label>
+    <br/>
+    <input type="text" name="nombre" id="nombre">
+    <br/><br/>
+    <!-- Elemento select que se rellena solo si hay nombres disponibles -->
+    <select th:if="${nombres != null}" name="usuario" id ="usuario">
+        <option th:each="nombre : ${nombres}" th:text="${nombre}" th:value="${nombre}">Nombre</option>
+    </select>
+    <br/><br/>
+    <input type="submit" value="enviar">
+
+</form>
+
+<script>
+    document.getElementById('usuario').addEventListener('change', function() {
+        var selectedName = this.value;
+        document.getElementById('nombre').value = selectedName;
+    });
+</script>
+
+</body>
+</html>

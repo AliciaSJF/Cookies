@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="comprobarClave" method="post">
+    <h1>Usuario Correcto</h1>
+    <input type="hidden" name="nombre" th:value="${nombre}">
+    <label for="clave" >Clave</label>
+    <br/>
+    <input type="password" name="clave" id="clave">
+    <br/><br/>
+    <input type="submit" value="enviar">
+</form>
+
+</body>
+</html>
